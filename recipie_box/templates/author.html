@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <ul>
+        
+        <li>{{author.name}}</li>
+        <li>{{author.bio}}</li>
+        {% for i in recipies%}
+        <li><a href="/recipies/{{i.id}}">{{ i.title}}</a></li>
+        {% endfor %}
+        
+    
+    </ul>
+{% endblock %}

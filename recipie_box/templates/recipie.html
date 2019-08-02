@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <ul>
+
+        <li>{{recipie.title}}</li>
+        <li><a href="/author/{{recipie.author.id}}">{{recipie.author.name}}</a></li>
+        <li>{{recipie.description}}</li>
+        <li>{{recipie.time}}</li>
+        <li>{{recipie.instructions}}</li>
+
+
+    </ul>
+{% endblock %}
