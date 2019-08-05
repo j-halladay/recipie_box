@@ -17,15 +17,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from recipie_box.views import index, recipie, author
+from recipie_box.views import index, recipie, author, addauthor, addrecipie
 from recipie_box.models import Author, Recipie
 
 admin.site.register(Author)
 admin.site.register(Recipie)
+# admin.site.register
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
     path('recipies/<int:id>', recipie),
-    path('author/<int:id>', author)
+    path('author/<int:id>', author),
+    path('addauthor/', addauthor),
+    path('addrecipie/', addrecipie)
 ]
