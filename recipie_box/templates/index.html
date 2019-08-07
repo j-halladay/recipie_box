@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% if user.is_authenticated %}  
+    <p><a href="/logout">logout</a></p>
+{% endif %}
 <ul>
     {% for i in recipies%}
     <li><a href="recipies/{{i.id}}">{{ i.title}}</a></li>
